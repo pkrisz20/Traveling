@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="css/aboutus.css">
+</head>
+<body>
+    <header class="header">
+
+        <div class="hamburger">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+        </div>
+
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="list-item"><a href="index.html" class="link">Home</a></li>
+                <li class="list-item"><a href="contactus.html" class="link">Contact</a></li>
+                <li class="list-item"><a href="aboutus.html" class="link">About Us</a></li>
+                <li class="list-item"><a href="tickets.html" class="link">Tickets</a></li>
+                <li class="list-item"><a href="events.html" class="link">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <img src="aboutus-img/meeting.jpg">
+        <div class="overlay"></div>
+        <div class="text-hero">
+            <h1>WHO ARE WE?</h1>
+        </div>
+    </div>
+
+    <div class="story">
+        <div class="wrapper-story">
+
+            <div class="column">
+                <h1>Our Story</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quam eum, deleniti quos, rerum animi reiciendis obcaecati ut enim, ea iusto praesentium debitis sint itaque? Repellendus, rerum aspernatur perspiciatis, voluptate cumque, suscipit culpa dolores unde nostrum numquam delectus sapiente. Alias quibusdam, dolores fuga temporibus exercitationem voluptate voluptatum veniam laborum, sed reiciendis vitae corporis nemo necessitatibus totam nihil voluptatem, ex iusto. Aliquid vitae ipsum ea quis suscipit ut omnis quasi nulla, esse consequatur minima voluptate. Possimus esse, ab vitae architecto eligendi nemo hic ipsa fugiat adipisci officia praesentium perspiciatis, officiis pariatur minima dolore natus eius reprehenderit suscipit quidem, labore debitis repellat!</p>
+            </div>
+
+            <div class="column">
+                <h1>Our Mission</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus labore unde maiores totam sint at vitae expedita eum, consectetur ut sed id neque temporibus corrupti blanditiis vel tenetur quae pariatur aliquam reprehenderit dolore. Quia possimus iusto a ipsa magnam, dolores, porro velit qui quod quisquam, eaque ullam libero repellendus consectetur mollitia sint iure in dolorem facilis deserunt itaque! Dolorem odio id asperiores aspernatur deserunt at nemo quo voluptatum! Aliquid cum, modi commodi architecto corrupti itaque quae maxime odit soluta nemo.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="countup">
+
+        <div class="wrapper">
+            <div class="block">
+                <h1>SATISFIED CLIENTS</h1>
+                <i class="fas fa-users"></i>
+                <div class="counter">12608</div>
+            </div>
+    
+            <div class="block">
+                <h1>VISITED PLACES</h1>
+                <i class="fas fa-globe-americas"></i>
+                <div class="counter">965</div>
+            </div>
+    
+            <div class="block">
+                <h1>SOLD TICKETS</h1>
+                <i class="fas fa-clipboard-list"></i>
+                <div class="counter">8210</div>
+            </div>
+    
+            <div class="block">
+                <h1>EMPLOYEES</h1>
+                <i class="fas fa-briefcase"></i>
+                <div class="counter">589</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="chart">
+
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                <h1>Journeys that were organized by us</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, magni veniam? Alias aperiam provident aut modi nobis ullam quo enim harum, voluptatibus veniam! Blanditiis ipsam recusandae necessitatibus, nemo at a sit quaerat culpa reprehenderit magni libero voluptatum atque non ducimus officia voluptates similique ut deleniti quo nesciunt repellat earum aspernatur.</p>
+            </div>
+    
+            <div class="chart-buttons">
+                <button id="link-europe" onclick="openChart(event, 'Europe')" class="chart-btn tablinks active">Europe</button>
+                <button id="link-america" onclick="openChart(event, 'America')" class="chart-btn tablinks">America</button>
+                <button id="link-asia" onclick="openChart(event, 'Asia')" class="chart-btn tablinks">Asia</button>
+                <button id="link-africa" onclick="openChart(event, 'Africa')" class="chart-btn tablinks">Africa</button>
+                <button id="link-australia" onclick="openChart(event, 'Australia')" class="chart-btn tablinks grid-footer">Australia and Oceania</button>
+            </div>
+
+            <canvas id="Europe" class="tabcontent"></canvas>
+            <canvas id="America" class="tabcontent"></canvas>
+            <canvas id="Asia" class="tabcontent"></canvas>
+            <canvas id="Africa" class="tabcontent"></canvas>
+            <canvas id="Australia" class="tabcontent"></canvas>
+        </div>
+
+    </div>
+
+    <div class="our-team">
+        <div class="wrapper-team">
+
+            <div class="team-title">
+                <h1>Our Team</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea eaque expedita, nobis obcaecati itaque perferendis aspernatur corrupti aliquid officiis ab reprehenderit deleniti ipsam nihil neque veritatis. Exercitationem inventore dicta repudiandae, error cumque quibusdam, totam fugiat laborum similique ullam illo modi?</p>
+            </div>
+
+            <div class="teammates">
+                <div class="cards">
+                    <img src="aboutus-img/worker1.jpeg">
+                    <div class="card-desc">
+                        <h1>Monica Smith</h1>
+                        <h1>Project Manager</h1>
+                        <i class="fas fa-phone-alt"></i>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
+    
+                <div class="cards">
+                    <img src="aboutus-img/worker2.jpeg">
+                    <div class="card-desc">
+                        <h1>Adam Davies</h1>
+                        <h1>Marketing Coordinator</h1>
+                        <i class="fas fa-phone-alt"></i>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
+    
+                <div class="cards">
+                    <img src="aboutus-img/worker3.jpeg">
+                    <div class="card-desc">
+                        <h1>James Hawk</h1>
+                        <h1>Director</h1>
+                        <i class="fas fa-phone-alt"></i>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
+    
+                <div class="cards">
+                    <img src="aboutus-img/worker4.jpeg">
+                    <div class="card-desc">
+                        <h1>Emma Jones</h1>
+                        <h1>Quality Control</h1>
+                        <i class="fas fa-phone-alt"></i>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
+    
+                <div class="cards">
+                    <img src="aboutus-img/worker5.jpeg">
+                    <div class="card-desc">
+                        <h1>Sophia Brown</h1>
+                        <h1>Receptionist</h1>
+                        <i class="fas fa-phone-alt"></i>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
+    
+                <div class="cards">
+                    <img src="aboutus-img/worker6.jpeg">
+                    <div class="card-desc">
+                        <h1>William Taylor</h1>
+                        <h1>Human Resources</h1>
+                        <i class="fas fa-phone-alt"></i>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="black-foo">
+            <div class="black-wrapper">
+                <div class="links-div">
+                    <div class="column">
+                        <h1>Widgets</h1>
+                        <a href="#">Instagram Feed</a>
+                        <a href="#">Google Reviews</a>
+                        <a href="#">WhatsApp Chat</a>
+                        <a href="#">Social Feed</a>
+                        <a href="#">Social Feed</a>
+                        <a href="#">All-in-One Chat</a>
+                        <a href="#">Countdown Timer</a>
+                        <a href="#">Popup</a>
+                        <a href="#">Facebook Feed</a>
+                        <a href="#">YouTube Gallery</a>
+                        <a class="see-all" href="#">See all widgets</a>
+                    </div>
+
+                    <div class="column">
+                        <h1>Platforms</h1>
+                        <a href="#">WordPress</a>
+                        <a href="#">Shopify</a>
+                        <a href="#">WhatsApp Chat</a>
+                        <a href="#">BigCommerce</a>
+                        <a href="#">Squarespace</a>
+                        <a href="#">Webflow</a>
+                        <a href="#">Wix</a>
+                        <a href="#">HTML</a>
+                        <a href="#">Google Sites</a>
+                        <a class="see-all" href="#">See all platforms</a>
+                    </div>
+
+                    <div class="column">
+                        <h1>Company</h1>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Affiliate Program</a>
+                        <a href="#">Developers</a>
+                        <h1>Community</h1>
+                        <div class="social-media">
+                            <a href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
+                            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                            <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <h1>Support</h1>
+                        <a href="#">Help Center</a>
+                        <a href="#">CodeCanyon Plugins Help</a>
+                        <h1>Resources</h1>
+                        <a href="#">Feature Wishlist</a>
+                        <a href="#">Tutorials</a>
+                        <a href="#">Integrations</a>
+                        <a href="#">Alternatives</a>
+                        <a href="#">Industries</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="copyright">Copyright © <span>2021</span> Travelling. All rights reserved.</div>
+            <div class="designed">Designed by
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 134.2 112.8" style="enable-background:new 0 0 134.2 112.8;" xml:space="preserve">
+                    <g>
+                    <path class="st0" d="M12.9,69.5c0,0-24.1-42-6.4-60.4c17.4-18.2,68.3-5.9,104,8.8c0,0-61.8,0-65.5,0c-6.8,0.1-19.9,4.9-23,16.3
+                        C18.9,46.1,12.9,69.5,12.9,69.5z"/>
+                    <path class="st1" d="M66.8,26h16.1c0,0,2,0.3,1.6,1.8c-0.4,1.5-7.7,28.8-7.7,28.8s-0.2,1.8-3.5,1.8c-3.3,0-14.4,0-14.4,0
+                        s-3,0.2-2.2-2.5c0.8-2.7,7.5-28,7.5-28S65,26,66.8,26z"/>
+                    <path class="st2" d="M122,24.2c0,0,13.9,8.7,12.1,22.4c-2.2,17.1-17.6,40.5-31.2,51c0,0-18.2,16.7-35.5,15.1
+                        c-17.4-1.7-32.2-10.5-47.4-32c0,0,3.5,2,8.2,2s69.6,0,69.6,0s0.9-0.1,2.6-0.8c1.7-0.8,9.8-5.1,10.5-6.2c0.7-1.1,0.3-1.3-0.4-1.3
+                        H54.1c0,0-1.8-0.2-1.8-1.8c0.1-1.6,0.8-4,0.8-4s1-1.9,2.9-2h40.2c0,0,17.9-0.6,23-15.9c3.2-12.5,4.5-17.7,4.5-17.7
+                        S124.9,28.3,122,24.2z"/>
+                    </g>
+                </svg>
+                <a class="link-erdsoft" target="blank" href="https://erdsoft.com/">Erdsoft</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="scripts/chart.js"></script>
+    <script src="scripts/tabs.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/sticky.js"></script>
+    
+    <script type="text/javascript">
+
+        var executed = false;
+        $(".counter").waypoint(function() {
+            if (!executed) {
+                executed = true;
+                $(".counter").counterUp({
+                    time: 2000,
+                    delay: 10
+                });
+            }
+        }, {offset:"100%"});
+
+    </script>
+</body>
+</html>
