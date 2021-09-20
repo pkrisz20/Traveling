@@ -9,6 +9,9 @@ body {
   .sticky {
     background: #2F4858;
   }
+  .sticky nav .menu .list-item .link {
+    font-size: 20px;
+  }
 }
 
 header {
@@ -108,6 +111,9 @@ header nav .menu .list-item .link {
   color: #F6EDD9;
   text-decoration: none;
   cursor: pointer;
+  text-shadow: 2px 2px 4px #000;
+  -webkit-transition: font-size .3s ease-in-out;
+  transition: font-size .3s ease-in-out;
 }
 
 header nav .menu .list-item .link::after {
@@ -137,14 +143,15 @@ header nav .menu .list-item .link:hover::after {
     visibility: visible;
   }
   header .change {
-    right: 0;
+    -webkit-transform: translateX(-320px);
+            transform: translateX(-320px);
   }
   header nav {
     width: 320px;
     height: 100vh;
     background-color: #001D41;
     position: absolute;
-    right: -100vw;
+    right: -320px;
     top: 0;
     bottom: 0;
     border-radius: 20% 0 0 60%;
@@ -157,8 +164,10 @@ header nav .menu .list-item .link:hover::after {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-transition: right 0.6s cubic-bezier(1, 0, 0, 1);
-    transition: right 0.6s cubic-bezier(1, 0, 0, 1);
+    -webkit-transition: -webkit-transform 0.6s cubic-bezier(1, 0, 0, 1);
+    transition: -webkit-transform 0.6s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.6s cubic-bezier(1, 0, 0, 1), -webkit-transform 0.6s cubic-bezier(1, 0, 0, 1);
   }
   header nav .menu {
     display: -webkit-box;
@@ -208,7 +217,8 @@ header nav .menu .list-item .link:hover::after {
     visibility: visible;
   }
   header .change {
-    right: 0;
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
   }
   header nav {
     width: 100vw;
@@ -228,8 +238,10 @@ header nav .menu .list-item .link:hover::after {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-transition: right 0.4s ease-in-out;
-    transition: right 0.4s ease-in-out;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   }
   header nav .menu {
     display: -webkit-box;
@@ -256,8 +268,20 @@ header nav .menu .list-item .link:hover::after {
 
 .hero-contact {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   position: relative;
+  background: url("../contact-img/contact-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero-contact::before {
@@ -270,24 +294,12 @@ header nav .menu .list-item .link:hover::after {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.hero-contact img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
 .hero-contact .contact-form {
+  position: relative;
+  z-index: 1;
   width: 1190px;
   margin: 0 auto;
-  height: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  height: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -300,9 +312,10 @@ header nav .menu .list-item .link:hover::after {
   border-radius: 5px 0 0 5px;
 }
 
-.hero-contact .contact-form .contact-info h1 {
+.hero-contact .contact-form .contact-info .info-title {
   color: #F6EDD9;
   text-align: center;
+  margin: 10px auto 0;
 }
 
 .hero-contact .contact-form .contact-info .info-row {
@@ -316,7 +329,7 @@ header nav .menu .list-item .link:hover::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px auto;
+  margin: 5px auto;
   font-size: 20px;
   color: #F6EDD9;
 }
@@ -360,13 +373,15 @@ header nav .menu .list-item .link:hover::after {
   color: #00587D;
 }
 
-.hero-contact .contact-form .form .contact-title h1 {
+.hero-contact .contact-form .form .contact-title .contact-us-title {
   text-align: center;
+  margin: 10px auto 0;
 }
 
-.hero-contact .contact-form .form .contact-title h4 {
+.hero-contact .contact-form .form .contact-title .contact-text {
   line-height: 24px;
   text-align: justify;
+  margin: 10px auto 0;
 }
 
 .hero-contact .contact-form .form .input-box {
@@ -412,7 +427,7 @@ header nav .menu .list-item .link:hover::after {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.hero-contact .contact-form .form .button-div {
+.hero-contact .contact-form .form .button {
   width: 70%;
   margin: 0 auto;
   display: -webkit-box;
@@ -426,7 +441,7 @@ header nav .menu .list-item .link:hover::after {
           align-items: center;
 }
 
-.hero-contact .contact-form .form .button-div .submit-btn {
+.hero-contact .contact-form .form .button .submit-btn {
   font-size: 18px;
   background: transparent;
   border: 2px solid #00587D;
@@ -439,30 +454,28 @@ header nav .menu .list-item .link:hover::after {
   transition: 0.4s;
 }
 
-.hero-contact .contact-form .form .button-div .submit-btn:hover {
+.hero-contact .contact-form .form .button .submit-btn:hover {
   background-color: #00587D;
   color: #F6EDD9;
 }
 
 @media (max-width: 1200px) {
+  .hero-contact {
+    height: 80vh;
+  }
   .hero-contact .contact-form {
     width: 90%;
     margin: 0 auto;
-    height: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   .hero-contact .contact-form .contact-info {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
-  .hero-contact .contact-form .contact-info h1 {
+  .hero-contact .contact-form .contact-info .info-title {
     margin: 10px;
   }
   .hero-contact .contact-form .contact-info .info-row {
@@ -505,6 +518,9 @@ header nav .menu .list-item .link:hover::after {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
   }
+  .hero-contact .contact-form .form {
+    height: auto;
+  }
   .hero-contact .contact-form .form .input-box {
     margin: 15px auto;
     width: 90%;
@@ -544,9 +560,9 @@ header nav .menu .list-item .link:hover::after {
     color: #00587D;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
-  .hero-contact .contact-form .form .button-div {
+  .hero-contact .contact-form .form .button {
     width: 70%;
-    margin: 0 auto;
+    margin: 15px auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -557,7 +573,7 @@ header nav .menu .list-item .link:hover::after {
         -ms-flex-align: center;
             align-items: center;
   }
-  .hero-contact .contact-form .form .button-div .submit-btn {
+  .hero-contact .contact-form .form .button .submit-btn {
     font-size: 18px;
     background: transparent;
     border: 2px solid #00587D;
@@ -569,13 +585,19 @@ header nav .menu .list-item .link:hover::after {
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
-  .hero-contact .contact-form .form .button-div .submit-btn:hover {
+  .hero-contact .contact-form .form .button .submit-btn:hover {
     background-color: #00587D;
     color: #F6EDD9;
   }
 }
 
 @media (max-width: 800px) {
+  .hero-contact {
+    height: 110vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .hero-contact .contact-form {
     width: 90%;
     margin: 0 auto;
@@ -587,90 +609,16 @@ header nav .menu .list-item .link:hover::after {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .hero-contact .contact-form .contact-info {
-    width: 100%;
-    height: 100%;
-  }
-  .hero-contact .contact-form .contact-info h1 {
-    margin: 10px;
-  }
-  .hero-contact .contact-form .contact-info .info-row {
-    width: 95%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 10px auto;
-    font-size: 20px;
-    color: #F6EDD9;
-  }
-  .hero-contact .contact-form .contact-info .social-media {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .hero-contact .contact-form .form .contact-title {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .hero-contact .contact-form .form .contact-title h1 {
-    text-align: center;
-    margin: 15px auto;
-  }
-  .hero-contact .contact-form .form .contact-title h4 {
-    margin: 15px auto;
-    line-height: 24px;
-    text-align: justify;
-  }
-  .hero-contact .contact-form .form .input-box {
-    margin: 10px auto;
-    width: 65%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .hero-contact .contact-form .form .button-div {
-    width: 70%;
-    margin: 15px auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-@media (max-width: 540px) {
-  .hero-contact .contact-form {
-    width: 90%;
-    margin: 0 auto;
-    height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   .hero-contact .contact-form .contact-info {
     width: 100%;
-    height: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
   }
-  .hero-contact .contact-form .contact-info h1 {
+  .hero-contact .contact-form .contact-info .info-title {
     margin: 5px;
   }
   .hero-contact .contact-form .contact-info .info-row {
@@ -685,7 +633,93 @@ header nav .menu .list-item .link:hover::after {
         -ms-flex-align: center;
             align-items: center;
     margin: 5px auto;
-    font-size: 18px;
+    font-size: 20px;
+    color: #F6EDD9;
+  }
+  .hero-contact .contact-form .contact-info .social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero-contact .contact-form .form {
+    height: auto;
+    border-radius: 0 0 5px 5px;
+  }
+  .hero-contact .contact-form .form .contact-title {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .hero-contact .contact-form .form .contact-title .contact-us-title {
+    text-align: center;
+    margin: 5px auto;
+  }
+  .hero-contact .contact-form .form .contact-title .contact-text {
+    margin: 5px auto;
+    line-height: 24px;
+    text-align: justify;
+  }
+  .hero-contact .contact-form .form .input-box {
+    margin: 10px auto;
+    width: 65%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .hero-contact .contact-form .form .button {
+    width: 70%;
+    margin: 5px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero-contact {
+    width: 100%;
+    height: 120vh;
+  }
+  .hero-contact .contact-form {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero-contact .contact-form .contact-info {
+    width: 100%;
+    height: 100%;
+  }
+  .hero-contact .contact-form .contact-info .info-title {
+    margin: 5px;
+  }
+  .hero-contact .contact-form .contact-info .info-row {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 5px auto;
+    font-size: 16px;
   }
   .hero-contact .contact-form .contact-info .social-media {
     display: -webkit-box;
@@ -696,17 +730,24 @@ header nav .menu .list-item .link:hover::after {
             justify-content: center;
     margin: 10px;
   }
+  .hero-contact .contact-form .form .contact-title {
+    font-size: 16px;
+  }
   .hero-contact .contact-form .form .input-box {
     width: 90%;
     margin: 10px auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-size: 16px;
   }
   .hero-contact .contact-form .form .input-box i {
     padding: 0 10px;
   }
-  .hero-contact .contact-form .form .button-div {
+  .hero-contact .contact-form .form .input-box input {
+    font-size: 16px;
+  }
+  .hero-contact .contact-form .form .button {
     width: 70%;
     margin: 15px auto;
     display: -webkit-box;
@@ -718,6 +759,9 @@ header nav .menu .list-item .link:hover::after {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .hero-contact .contact-form .form .button .submit-btn {
+    font-size: 16px;
   }
 }
 
@@ -749,8 +793,8 @@ header nav .menu .list-item .link:hover::after {
   text-align: center;
 }
 
-.company .company-wrapper .company-title h1 {
-  margin: 0 auto 30px;
+.company .company-wrapper .company-title .come-title {
+  margin: 20px auto 40px;
 }
 
 .company .company-wrapper .company-block {
@@ -804,7 +848,7 @@ header nav .menu .list-item .link:hover::after {
   height: auto;
 }
 
-.company .company-wrapper .company-block .company-desc h1 {
+.company .company-wrapper .company-block .company-desc .personal {
   text-align: center;
 }
 
@@ -812,6 +856,7 @@ header nav .menu .list-item .link:hover::after {
   text-align: justify;
   line-height: 28px;
   font-size: 18px;
+  margin-left: 15px;
 }
 
 .company .company-wrapper .company-block .company-desc .job {
@@ -958,6 +1003,9 @@ header nav .menu .list-item .link:hover::after {
     -ms-grid-column-span: 2;
     grid-area: header;
   }
+  .company .company-wrapper .company-block .company-desc p {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 800px) {
@@ -1026,7 +1074,7 @@ header nav .menu .list-item .link:hover::after {
     width: 100%;
     text-align: center;
   }
-  .company .company-wrapper .company-title h1 {
+  .company .company-wrapper .company-title .come-title {
     font-size: 26px;
     margin: 10px auto;
   }
@@ -1062,7 +1110,7 @@ header nav .menu .list-item .link:hover::after {
     width: 100%;
     height: auto;
   }
-  .company .company-wrapper .company-block .company-desc h1 {
+  .company .company-wrapper .company-block .company-desc .personal {
     margin: 10px auto;
     font-size: 26px;
     text-align: center;
@@ -1088,9 +1136,18 @@ header nav .menu .list-item .link:hover::after {
   visibility: hidden;
 }
 
+.modal-job::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .modal-job .modal-form {
   width: 1200px;
-  height: auto;
+  min-height: 80vh;
+  max-height: 100vh;
   margin: 0 auto;
   position: absolute;
   z-index: 14;
@@ -1114,7 +1171,7 @@ header nav .menu .list-item .link:hover::after {
   background-color: #F6EDD9;
 }
 
-.modal-job .modal-form h1 {
+.modal-job .modal-form .join-title {
   text-align: center;
 }
 
@@ -1233,21 +1290,14 @@ header nav .menu .list-item .link:hover::after {
   background-color: #0082B0;
 }
 
-.modal-job::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
 @media (max-width: 800px) {
   .modal-job .modal-form {
     width: 100%;
+    height: 100vh;
   }
   .modal-job .modal-form form {
     width: 90%;
-    height: auto;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1272,10 +1322,6 @@ header nav .menu .list-item .link:hover::after {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     cursor: pointer;
-  }
-  .modal-job .modal-form form i:hover {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
   }
   .modal-job .modal-form form .job-input {
     margin: 10px auto;
@@ -1339,7 +1385,7 @@ header nav .menu .list-item .link:hover::after {
     width: 100vw;
     height: 100vh;
   }
-  .modal-job .modal-form h1 {
+  .modal-job .modal-form .join-title {
     margin: 10px;
   }
   .modal-job .modal-form form {
@@ -1362,20 +1408,16 @@ header nav .menu .list-item .link:hover::after {
   }
   .modal-job .modal-form form i {
     position: absolute;
-    top: -80px;
-    right: -10px;
+    top: 0;
+    right: 0;
     font-size: 30px;
     color: #0082B0;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     cursor: pointer;
   }
-  .modal-job .modal-form form i:hover {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
   .modal-job .modal-form form .job-input {
-    margin: 10px auto;
+    margin: 0 auto;
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1464,10 +1506,6 @@ footer .bottom .copyright {
   padding: 0 60px;
   font-size: 20px;
   color: #F6EDD9;
-}
-
-footer .bottom .copyright span {
-  color: #00C1FF;
 }
 
 footer .bottom .designed {
